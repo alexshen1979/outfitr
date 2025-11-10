@@ -36,19 +36,19 @@ GitHub 从 2021 年 8 月起不再支持密码认证，您需要使用 **Persona
 
 ```bash
 # 添加远程仓库（将 YOUR_USERNAME 和 REPO_NAME 替换为实际值）
-git remote add origin https://github.com/zjsxr1979/outfitr.git
+git remote add origin https://github.com/alexshen1979/outfitr.git
 
 # 推送代码（使用 token 作为密码）
 git push -u origin master
 ```
 
-当提示输入用户名时，输入：`zjsxr1979`
+当提示输入用户名时，输入：`alexshen1979`
 当提示输入密码时，输入：**您的 Personal Access Token**（不是 GitHub 密码）
 
 ## 或者使用 token 直接推送
 
 ```bash
-git remote add origin https://YOUR_TOKEN@github.com/zjsxr1979/outfitr.git
+git remote add origin https://YOUR_TOKEN@github.com/alexshen1979/outfitr.git
 git push -u origin master
 ```
 

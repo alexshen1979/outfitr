@@ -10,7 +10,7 @@ Write-Host ""
 $remoteExists = git remote get-url origin 2>$null
 if ($LASTEXITCODE -ne 0) {
     Write-Host "正在添加远程仓库..." -ForegroundColor Yellow
-    git remote add origin https://github.com/zjsxr1979/outfitr.git
+    git remote add origin https://github.com/alexshen1979/outfitr.git
     Write-Host "远程仓库已添加" -ForegroundColor Green
 } else {
     Write-Host "远程仓库已配置: $remoteExists" -ForegroundColor Green
@@ -38,7 +38,7 @@ Write-Host ""
 Write-Host "正在推送代码到 GitHub..." -ForegroundColor Yellow
 
 # 使用 token 配置远程 URL
-$remoteUrl = "https://$tokenPlain@github.com/zjsxr1979/outfitr.git"
+$remoteUrl = "https://$tokenPlain@github.com/alexshen1979/outfitr.git"
 git remote set-url origin $remoteUrl
 
 # 推送代码
@@ -48,11 +48,11 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host ""
     Write-Host "========================================" -ForegroundColor Green
     Write-Host "代码已成功推送到 GitHub！" -ForegroundColor Green
-    Write-Host "仓库地址: https://github.com/zjsxr1979/outfitr" -ForegroundColor Green
+    Write-Host "仓库地址: https://github.com/alexshen1979/outfitr" -ForegroundColor Green
     Write-Host "========================================" -ForegroundColor Green
     
     # 清除 token（安全考虑）
-    git remote set-url origin https://github.com/zjsxr1979/outfitr.git
+    git remote set-url origin https://github.com/alexshen1979/outfitr.git
     Write-Host ""
     Write-Host "已从远程 URL 中移除 token（安全考虑）" -ForegroundColor Yellow
 } else {
